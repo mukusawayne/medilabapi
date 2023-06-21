@@ -108,4 +108,12 @@ class ViewInvoiceDetails(Resource):
             current_password = json['current_password']
             new_password = json['new_password']
             confirm_password = json['confirm_password ']
-            sql =''''''
+            # select using the nurse id, if nurtse does not exist, give a mesage
+            # if nurse exists get the hashed password
+            # Verify if the current password and hashed password are ok 
+            # if  current password ius verified = False,Give a message - current is wrong
+            # If verified is true, then confirm that new_password and confirm_password are the same.
+            # If they are not the same , Give a message.
+            # If they are ssame then, hash new_password and do update Query, Update pasword using nurse_id
+            # Give a message password updated
+            # Go login with the new password
