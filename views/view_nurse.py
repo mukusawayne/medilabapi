@@ -108,3 +108,4 @@ class ViewInvoiceDetails(Resource):
             current_password = json['current_password']
             new_password = json['new_password']
             confirm_password = json['confirm_password ']
+            sql =''''''
