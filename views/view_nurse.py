@@ -99,3 +99,12 @@ class ViewInvoiceDetails(Resource):
             jsonStr = json.dumps(bookings, indent=1, sort_keys=True, default=str)
             # then convert json string to json object
             return json.loads(jsonStr)
+        
+        
+    class ChangePass(Resource):
+        def post(self):
+            json = request.json
+            nurse_id = json['nurse_id']
+            current_password = json['current_password']
+            new_password = json['new_password']
+            confirm_password = json['confirm_password ']

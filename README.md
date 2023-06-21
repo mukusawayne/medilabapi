@@ -21,9 +21,7 @@ pip install bcrypt
 pip install africastalking
 pip install fpdf
 
-step4: Python set up
-
-create a folder named views and place the view_nurses.py,views.py and views_dashboard.py inside
+step4: Python set up create a folder named views and place the view_nurses.py,views.py and views_dashboard.py inside
 
 in the roots folder create a functions.py
 in the root folder again create app.py and configure your endpoints
