@@ -175,7 +175,7 @@ class ViewDependants(Resource):
             return jsonify({"message": "You have no Dependants"})
         else:
             dependants = cursor.fetchall()
-            return jsonify({dependants})
+            return jsonify({"message":dependants})
         # {} - Means Object in JSON, comes with key - value
         # [] - Means a JSON array
         # [{}, {} ]
@@ -262,29 +262,23 @@ class MakeBooking(Resource):
         except:
             connection.rollback()
             return jsonify({'message': 'Booking failed. Try Again'})
-
-#My bookings
+ #My Bookings       
 class MyBookings(Resource):
-    @jwt_required(refresh=True)#refresh token
-    def __init__(self):
-        self.sql = "select * from bookings where member_id = %s"
-        self.connection = pymysql.connect(host='localhost',
-                                     user='root',
-                                     password='',
-                                     database='medilab')
-        self.cursor = self.connection.cursor(pymysql.cursors.DictCursor)
     def get(self):
         json = request.json
         member_id = json['member_id']
         sql = "select * from bookings where member_id = %s"
-        
-        
-        self.cursor.execute(self.sql, member_id)
-        count = self. cursor.rowcount
+        connection = pymysql.connect(host='localhost',
+                                     user='root',
+                                     password='',
+                                     database='medilab')
+        cursor = connection.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql, member_id)
+        count =cursor.rowcount
         if count == 0:
             return jsonify({'message': 'You have no booking'})
         else:
-            bookings = self.cursor.fetchall()
+            bookings = cursor.fetchall()
             #return  str(bookings)
             import json
             jsonStr = json.dumps(bookings, indent=1, sort_keys=True,

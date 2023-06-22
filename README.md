@@ -16,11 +16,13 @@ step 2; create and import medilab.sql.
 
 step3: create a flask app and install theese packages
 '''
-pip install flask
-pip install pymysql
-pip install bcrypt
-pip install africastalking
-pip install fpdf
+pip3 install flask
+pip3 install pymysql
+pip3 install bcrypt
+pip3 install africastalking
+pip3 install fpdf
+pip3 install fask_restful
+pip3 install flask-jwt-extended
 
 '''
 
