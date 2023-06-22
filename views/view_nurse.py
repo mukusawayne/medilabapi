@@ -116,7 +116,7 @@ class ChangePass(Resource):
         nurse_id = json['nurse_id']
         current_password = json['current_password']
         new_password = json['new_password']
-        confirm_password = json['confirm_password ']
+        confirm_password = json['confirm_password']
         # select using the nurse id, if nurse does not exist, give a mesage
         sql = "select * from nurses where nurse_id = %s"
         connection = pymysql.connect(host='localhost',
