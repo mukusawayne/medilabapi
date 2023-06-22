@@ -1,39 +1,36 @@
 # MediLab API
-This is an APi Build in python Flask framework and MySQL database,
+This is an APi Build in Python Flask framework and MySQl database,
 
-## The API has 3 parts.
+## The APi has 3 Parts.
+1. The API allows register a member, sign in, pfofile, add dependants, make booking, make payments etc.
 
-1. The API allows the client to register a member, sign in, profile, add dependants, make booking, make payments e.t.c
+2. Other APIs include sign in, sign up laboratory,add lab tests, add nurses, allocate to nurses.
 
-2. Other APIS include sign in, sign up, add laboratory, add lab tests , add nurses, allocate nurses
+3. Nurse Apis allows nurses to Login and access their allocated Tasks, change password.
 
-3. Nurse APIS  allows nurse to login and access the allocated tasks , change password
+### How to Install
+Step1: Download xampp from https://www.apachefriends.org/ 
 
-### How to install
-step 1: Download xampp from https://www.apachefriends.org/
+Step2: Create and import medilab.sql.
 
-step 2; create and import medilab.sql.
+Step3: Create a flask app and Install these Packages
 
-step3: create a flask app and install theese packages
-'''
-pip3 install flask
+pip3 install flask --upgrade
+pip3 install werkzeug --upgrade
 pip3 install pymysql
 pip3 install bcrypt
 pip3 install africastalking
-pip3 install fpdf
-pip3 install fask_restful
+pip3 install fpdf --user
+pip3 install flask_restful
 pip3 install flask-jwt-extended
 
-'''
+Step 4: Python Set up.
 
-step 4:Create a folder named views and place the view_nurses.py,views.py and views_dashboard.py inside
+Create a Folder named views and place the view_nurses.py, views.py and views_dashboard.py Inside.
 
-In the roots folder create a functions.py
-In the root folder again create app.py and configure your endpoints
+In the root folder create a functions.py. In the root folder again create app.py and configure your Endpoints.
 
-Run your app
+Run Your App.
 
-Useful links
-
-https://flask.palletsprojects.com/en/1.1.x/
-https://github.com/africastalking/AfricasTalking
+Useful Links https://flask.palletsprojects.com/en/1.1.x/
+ https://github.com/africastalking/AfricasTalking-SDK-
