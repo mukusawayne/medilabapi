@@ -47,10 +47,11 @@ api.add_resource(ViewNurses, "/api/view_nurses")
 api.add_resource(TaskAllocation, "/api/task_allocation")
 
 #Apis for nurse dashboard
-from views.view_nurse import NurseSignin,ViewAssignments,ViewInvoiceDetails
+from views.view_nurse import NurseSignin,ViewAssignments,ViewInvoiceDetails,ChangePass
 api.add_resource(NurseSignin, "/api/nurse_signin")
 api.add_resource(ViewAssignments,"/api/view_assignments")
 api.add_resource(ViewInvoiceDetails,"/api/view_invoice_details")
+api.add_resource(ChangePass,"/api/change_pass")
 
 
 if __name__ == "__main__":
