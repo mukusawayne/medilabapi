@@ -34,5 +34,5 @@ In the root folder create a functions.py. In the root folder again create app.py
 
 Run Your App.
 
-Useful Links https://flask.palletsprojects.com/en/1.1.x/
-            https://github.com/africastalking/AfricasTalking-SDK-
+Useful Links    https://flask.palletsprojects.com/en/1.1.x/
+                https://github.com/africastalking/AfricasTalking-SDK-
